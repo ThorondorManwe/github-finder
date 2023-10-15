@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
 //import './App.css';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
       <div className='flex flex-col justify-between h-screen'>
         <Navbar />
 
-        <main>content</main>
+        <main className='container mx-auto px-3 pb-12'>content</main>
+
+        <Footer />
       </div>
     </Router>
   )
