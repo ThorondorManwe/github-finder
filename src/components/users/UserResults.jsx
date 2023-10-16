@@ -1,28 +1,13 @@
 /* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import Spinner from "../layout/Spinner";
 import UserItem from "./UserItem";
+import GithubContext from '../../context/github/GithubContext'
 
 function UserResults() {
-  const [users, setUsers] = useState([]);
-  const [loading, setLoading] = useState(true);
 
-  const fetchUsers = async () => {
-    const response = await fetch(
-      `${import.meta.env.VITE_REACT_APP_GITHUB_URL}/users`,
-      {
-        headers: {
-          Authorization: `token ${import.meta.env.VITE_REACT_APP_GITHUB_TOKEN}`,
-        },
-      }
-    );
-
-    const data = await response.json();
-
-    setUsers(data);
-    setLoading(false);
-  };
+  const { users, loading, fetchUsers } = useContext(GithubContext)
 
   useEffect(() => {
     fetchUsers();
