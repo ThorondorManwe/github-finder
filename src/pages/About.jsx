@@ -14,7 +14,7 @@ function About() {
         </a>{" "}
         Udemy course by
         <strong>
-          <a href="https://traversymedia.com"> Brad Traversy</a>
+          <a href="https://traversymedia.com" target="_blank" rel="noreferrer"> Brad Traversy</a>
         </strong>
         .
       </p>
@@ -23,9 +23,13 @@ function About() {
       </p>
       <p className="text-lg text-gray-400">
         Layout By:
-        <a className="text-white" href="https://twitter.com/hassibmoddasser">
+        <a className="text-white" href="https://twitter.com/hassibmoddasser" target="_blank" rel="noreferrer">
           Hassib Moddasser
         </a>
+      </p>
+      <p className="text-lg text-gray-400">
+        I made some modifications because in the curse Create React App was used but in 2023 Vite is used so I changed the way to use .env variables in the project. Catch me on X: 
+        <a className="text-white" href="https://twitter.com/CarlosRanghul" target="_blank" rel="noreferrer"> Carlos Rangel</a>
       </p>
     </div>
   );
