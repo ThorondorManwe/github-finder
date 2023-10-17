@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import GithubContext from "../context/github/GithubContext";
@@ -14,6 +15,7 @@ function User() {
   useEffect(() => {
     getUser(params.login);
     getUserRepos(params.login);
+    
   }, []);
 
   const {
